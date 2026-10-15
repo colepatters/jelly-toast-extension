@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/extension-settings.css" />
+  </head>
+
+  <body>
+    <div style="display: flex; flex-direction: column">
+      <h3>Jelly - for Toast</h3>
+
+      <form>
+        <label for="input-publish-menu-preference"
+          >Publish menu preference</label
+        >
+        <select
+          name="publish-menu-preference"
+          id="input-publish-menu-preference"
+        >
+          <option value="v1">v1 (default)</option>
+          <option value="v2">v2</option>
+          <option value="publishCenter">Publish Center</option>
+        </select>
+
+        <button type="submit">Save</button>
+      </form>
+    </div>
+    <script src="/js/extension-settings.js"></script>
+  </body>
+</html>

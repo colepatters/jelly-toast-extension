@@ -1,0 +1,7 @@
+table#bulk-edit-table {
+  max-width: 100%;
+}
+
+div.container.with-left-rail-static {
+  max-width: 100% !important;
+}

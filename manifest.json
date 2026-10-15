@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Jelly - for Toast",
+    "version": "1.0",
+    "description": "Adds additional functionality to Toast web.",
+    "icons": {
+        "48": "icons/icon-48.png",
+        "96": "icons/icon-96.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "jellyfortoast@mozilla.org",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
+    "options_ui": {
+        "page": "html/extension-settings.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.toasttab.com/*"
+            ],
+            "js": [
+                "js/publishConfigDestination.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.toasttab.com/advancedproperties/bulkeditor"
+            ],
+            "js": [
+                "js/advancedMenuProperties.js"
+            ],
+            "css": [
+                "css/advancedMenuProperties.css"
+            ]
+        }
+    ]
+}
